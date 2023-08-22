@@ -9,15 +9,7 @@
         <div class="row row-cols-4">
             @forelse ($movies as $movie)
                 <div class="col">
-                    <div class="card mb-3">
-                        <img src="{{ $movie['thumb'] }}" class="card-img-top" alt="{{ $movie['name'] }}">
-                        <div class="card-body">
-                            <h4 class="card-title">{{ $movie['name'] }}</h4>
-                            <p class="card-text">{{ $movie['locality'] }}</p>
-                            <p class="card-text">{{ $movie['date'] }}</p>
-                            <p class="card-text">{{ $movie['vote'] }}</p>
-                        </div>
-                    </div>
+                    @include('includes.movies.card')
                 </div>
 
             @empty
