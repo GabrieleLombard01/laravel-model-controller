@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    $movies = config('movies');
-    return view('home', compact('movies'));
-})->name('home');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
