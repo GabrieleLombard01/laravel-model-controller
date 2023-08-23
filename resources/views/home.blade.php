@@ -7,14 +7,17 @@
 
     <section id="movies">
         <div class="row row-cols-4">
-            @forelse ($movies as $movie)
+
+            @include('includes.movies.card')
+
+            {{-- @forelse ($movies as $movie)
                 <div class="col">
                     @include('includes.movies.card')
                 </div>
 
             @empty
                 <h3 class="fw-bold text-center pt-2">There isn't movies :(</h3>
-            @endforelse
+            @endforelse --}}
         </div>
     </section>
 
