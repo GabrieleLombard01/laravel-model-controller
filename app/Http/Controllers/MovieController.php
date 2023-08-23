@@ -10,6 +10,6 @@ class MovieController extends Controller
     public function index()
     {
         $movies = config('movies');
-        return view('nomeblade', compact('movies'));
+        return view('movies.index', compact('movies'));
     }
 }
