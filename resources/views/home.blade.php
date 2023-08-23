@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('main-content')
-    <h1 class="fw-bold text-center pt-2">My movies:</h1>
+    <h1 class="fw-bold text-center pt-2">My last movie:</h1>
 
     <section id="movies">
         <div class="row row-cols-4">

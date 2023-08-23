@@ -15,22 +15,12 @@
                                 href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" class="@if (Route::is('about')) active @endif"
-                                href="{{ route('about') }}">About me</a>
+                            <a class="nav-link @if (Route::is('movies.index')) active @endif" aria-current="page"
+                                href="{{ route('movies.index') }}">Movies</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Genres
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Fear</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Other Genres...</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link @if (Route::is('about')) active @endif"
+                                href="{{ route('about') }}">About me</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
